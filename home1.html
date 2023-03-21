@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Doctor Appointment Management System</title>
+  <link rel="stylesheet" href="home1.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#login-button").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $("#modal").load("login.html");
+        $("#modal").fadeIn();
+      });
+
+
+      $("#register-button").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $("#modal").load("registration.html");
+        $("#modal").fadeIn();
+      });
+
+      $("#close-modal").click(function () {
+        $("#modal").fadeOut();
+      });
+
+      $(".nav1").click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr("href");
+        $("html, body").animate({
+          scrollTop: $(target).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Doctor Appointment Management System Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a class="nav1" href="javascript:void(0)">Home</a></li>
+        <li><a class="nav1" id="login-button" href="#">Login</a></li>
+        <li><a class="nav1" id="register-button" href="#">Register</a></li>
+        <li><a class="nav1" href="#AboutUs">About Us</a></li>
+        <li><a class="nav1" href="#contactus">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="home-slider" id="home">
+      <img
+        src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        alt="Welcome to our appointment management system" class="active" id="home_image">
+      <img
+        src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        alt="Welcome to our appointment management system" id="home_image">
+      <img
+        src="https://images.unsplash.com/photo-1514416309827-bfb0cf433a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        alt="Welcome to our appointment management system" id="home_image">
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+      </div>
+    </div>
+    <div id="AboutUs">
+
+
+      <div class="about-us">
+        <h2>About Us</h2>
+        <p>We are a team of experienced professionals who have come together to create a comprehensive doctor
+          appointment management system. Our goal is to provide a platform that is easy to use and allows patients to
+          schedule appointments with their doctors conveniently. With our system, patients can book, reschedule, or
+          cancel appointments at any time, from anywhere.</p>
+        <p>We understand that managing appointments can be a daunting task, especially for busy healthcare providers.
+          Our system takes care of all the administrative work, freeing up time for healthcare professionals to focus on
+          their patients. </p>
+        <p>Our appointment management system is secure, reliable, and user-friendly. We take the privacy of our users
+          seriously and have implemented industry-standard security protocols to ensure that all information is
+          protected.</p>
+      </div>
+      <div id="contactus">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, comments, or feedback, please feel free to contact us. You can reach us via email
+          at info@doctorsystem.com or by phone at +1 (555) 123-4567. We are available 24/7 and are always happy to
+          assist you.</p>
+      </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+
+<script>
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("home-slider")[0].getElementsByTagName("img");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000);
+  }
+
+</script>
+<script>
+  document.querySelector(".nav1").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+
+</html>
