@@ -53,13 +53,13 @@
   <main>
     <div class="home-slider" id="home">
       <img
-        src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt="Welcome to our appointment management system" class="active" id="home_image">
       <img
-        src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt="Welcome to our appointment management system" id="home_image">
       <img
-        src="https://images.unsplash.com/photo-1514416309827-bfb0cf433a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        src="https://images.unsplash.com/photo-1488998527040-85054a85150e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt="Welcome to our appointment management system" id="home_image">
     </div>
 
@@ -68,28 +68,40 @@
         <span id="close-modal" class="close">&times;</span>
       </div>
     </div>
-    <div id="AboutUs">
+    <div class="about-us" id="AboutUs">
+      <h2>About Us</h2>
+      <p>We are a team of experienced professionals who have come together to create a comprehensive doctor
+        appointment management system. Our goal is to provide a platform that is easy to use and allows patients to
+        schedule appointments with their doctors conveniently. With our system, patients can book, reschedule, or
+        cancel appointments at any time, from anywhere.</p>
+      <p>We understand that managing appointments can be a daunting task, especially for busy healthcare providers.
+        Our system takes care of all the administrative work, freeing up time for healthcare professionals to focus on
+        their patients. </p>
+      <p>Our appointment management system is secure, reliable, and user-friendly. We take the privacy of our users
+        seriously and have implemented industry-standard security protocols to ensure that all information is
+        protected.</p>
+    </div>
 
-
-      <div class="about-us">
-        <h2>About Us</h2>
-        <p>We are a team of experienced professionals who have come together to create a comprehensive doctor
-          appointment management system. Our goal is to provide a platform that is easy to use and allows patients to
-          schedule appointments with their doctors conveniently. With our system, patients can book, reschedule, or
-          cancel appointments at any time, from anywhere.</p>
-        <p>We understand that managing appointments can be a daunting task, especially for busy healthcare providers.
-          Our system takes care of all the administrative work, freeing up time for healthcare professionals to focus on
-          their patients. </p>
-        <p>Our appointment management system is secure, reliable, and user-friendly. We take the privacy of our users
-          seriously and have implemented industry-standard security protocols to ensure that all information is
-          protected.</p>
-      </div>
-      <div id="contactus">
+    <div id="contactus">
+      <div id="contact-form">
         <h2>Contact Us</h2>
-        <p>If you have any questions, comments, or feedback, please feel free to contact us. You can reach us via email
-          at info@doctorsystem.com or by phone at +1 (555) 123-4567. We are available 24/7 and are always happy to
-          assist you.</p>
+        <form method="post" action="form.php">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" name="submit" value="Submit">Submit</button>
+        </form>
       </div>
+      <img id="contact-icon" src="https://burst.shopifycdn.com/photos/contact-us-image.jpg?width=925&format=pjpg&exif=1&iptc=1" alt="Contact Us">
+    </div>
+    
+
+
   </main>
   <footer>
     <div class="footer-content">
