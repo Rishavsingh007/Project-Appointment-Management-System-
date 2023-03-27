@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Doctor Appointment Management System</title>
+  <link rel="stylesheet" href="home1.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#login-button").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $("#modal").load("login.html");
+        $("#modal").fadeIn();
+      });
+
+
+      $("#register-button").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $("#modal").load("registration.html");
+        $("#modal").fadeIn();
+      });
+
+      $("#close-modal").click(function () {
+        $("#modal").fadeOut();
+      });
+
+      $(".nav1").click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr("href");
+        $("html, body").animate({
+          scrollTop: $(target).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Doctor Appointment Management System Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a class="nav1" href="javascript:void(0)">Home</a></li>
+        <li><a class="nav1" id="login-button" href="#">Login</a></li>
+        <li><a class="nav1" id="register-button" href="#">Register</a></li>
+        <li><a class="nav1" href="#AboutUs">About Us</a></li>
+        <li><a class="nav1" href="#contactus">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="home-slider" id="home">
+      <img
+        src="https://i.pinimg.com/originals/dd/5e/70/dd5e70200f415dca0f373e25fecea714.jpg"
+        alt="Welcome to our appointment management system" class="active" id="home_image">
+      <img
+        src="https://wallpaperaccess.com/full/137028.jpg"
+        alt="Welcome to our appointment management system" id="home_image">
+      <img
+        src="https://img.freepik.com/free-photo/enthusiastic-doctor-woman-rejoicing-winning-celebrating-achieve-goal-standing-white-coat-agai_1258-120495.jpg"
+        alt="Welcome to our appointment management system" id="home_image">
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+      </div>
+    </div>
+    <div id="AboutUs">
+
+
+      <div class="about-us">
+       <h1> About-us</h1>
+       <p>
+        </p>
+       </div>
+       <section class="about-us">
+      <img src="images2.jpg">
+        <div class="content">
+          <h2>We are a team of experienced professionals who have come together to create a comprehensive doctor appointment management system</h2>
+          <p>   
+            We understand that managing appointments can be a daunting task, especially for busy healthcare providers.
+                Our system takes care of all the administrative work, freeing up time for healthcare professionals to 
+                focus on their patients.Our appointment management system is secure, reliable, and user-friendly. We take 
+                the privacy of our users seriously and have implemented industry-standard security protocols to ensure that all information is
+                protected</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+       </section>
+      </div>
+   
+  </main>
+  <footer>
+    <div class="footer-content">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+
+<script>
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("home-slider")[0].getElementsByTagName("img");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000);
+  }
+
+</script>
+<script>
+  document.querySelector(".nav1").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+
+</html>
