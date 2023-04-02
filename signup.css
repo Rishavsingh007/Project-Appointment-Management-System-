@@ -1,11 +1,8 @@
 
 body{
-    margin: 7%;
+    margin: 2%;
     background-color: #F6F7FA;
 }
-
-
-
 .container{
     width: 45%;
     background-color: white;
@@ -24,9 +21,8 @@ td{
 .header-text{
     font-weight: 600;
     font-size: 30px;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     margin-bottom: 10px;
-
 }
 
 .sub-text{
@@ -55,7 +51,7 @@ td{
 
 
 }.login-btn{
-    /*margin-top: 15px;*/
+    margin-top: 15px;
     margin-bottom: 15px;
     width: 100%;
 }
